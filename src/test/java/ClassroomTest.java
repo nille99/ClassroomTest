@@ -33,27 +33,20 @@ public class ClassroomTest {
 
 	}
 	
+
 	@Test
-	public void testGetClassroomName() {
-		assertEquals(classroom.getClassroomName().equals("Test17"),true);
-	}
-	@Test
-	public void testGetClassroomTerm() {	
-		assertEquals(classroom.getClassroomTerm().equals("Spring 17"),true);
-	}
-	@Test
-	public void testSetClassroomName() {
+	public void testGetAndSetClassroomName() {
 		classroom.setClassroomName("Test18");
 		assertEquals(classroom.getClassroomName().equals("Test18"),true);
 	}
 	@Test
-	public void testSetClassroomTerm() {	
+	public void testGetAndSetClassroomTerm() {	
 		classroom.setClassroomTerm("Spring 18");
 		assertEquals(classroom.getClassroomTerm().equals("Spring 18"),true);
 	}
 
 	@Test
-	public void testsetStudents() {	
+	public void testGetAndSetStudents() {	
 		classroom.setStudents(students);
 		assertEquals(classroom.getStudents(),students);
 	}

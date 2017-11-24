@@ -15,8 +15,8 @@ public class PersonTest {
 	}
 	@Test
 	public void testSetAndGetLastName() {
-		p.setFirstName("sawen");
-		assertEquals(p.getFirstName().equals("sawen"),true);
+		p.setLastName("sawen");
+		assertEquals(p.getLastName().equals("sawen"),true);
 	}
 	@Test
 	public void testSetAndGetAge() {
