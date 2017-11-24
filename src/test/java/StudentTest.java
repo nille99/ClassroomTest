@@ -9,27 +9,27 @@ public class StudentTest {
 	
 	//Testing from extends Person
 	
-Person p = new Person("Niklas", "sawen", 40,'M');
+Person s = new Person("Niklas", "sawen", 40,'M');
 	
 	@Test
 	public void testSetAndGetFirstName() {
-		p.setFirstName("kalle");
-		assertEquals(p.getFirstName().equals("kalle"),true);
+		s.setFirstName("kalle");
+		assertEquals(s.getFirstName().equals("kalle"),true);
 	}
 	@Test
 	public void testSetAndGetLastName() {
-		p.setLastName("sawen");
-		assertEquals(p.getLastName().equals("sawen"),true);
+		s.setLastName("sawen");
+		assertEquals(s.getLastName().equals("sawen"),true);
 	}
 	@Test
 	public void testSetAndGetAge() {
-		p.setAge(26);
-		assertEquals(p.getAge(),26);
+		s.setAge(26);
+		assertEquals(s.getAge(),26);
 	}
 	@Test
 	public void testSetAndGetGender() {
-		p.setGender('W');
-		assertEquals(p.getGender(),'W');
+		s.setGender('W');
+		assertEquals(s.getGender(),'W');
 	}
 	
 	//Testing of Student
