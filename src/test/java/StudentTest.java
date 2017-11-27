@@ -57,6 +57,72 @@ Person s = new Person("Niklas", "sawen", 40,'M');
 	}
 
 	@Test
+	public void testSetandGetAverageGrade() {
+		student.setAverageGrade(5.0);
+		assertEquals(student.getAverageGrade() == 5.0, true);
+	}
+
+	@Test
+	public void testCalculateAveragewithParam() {
+		student.setSecondGrade(5);
+		student.setThirdGrade(5);
+		double result = student.calculateAverage(5);
+
+		assertEquals((student.getAverageGrade() == result) && (result == 5), true);
+	}
+
+	@Test
+	public void testCalculateAveragewithNoParam() {
+		student.setFirstGrade(5);
+		student.setSecondGrade(5);
+		student.setThirdGrade(5);
+		student.calculateAverage();
+
+		assertEquals((student.getAverageGrade() == 5), true);
+
+	}
+
+	@Test
+	public void testCalculateAveragewithAllParam() {
+		double result = student.calculateAverage(5, 5, 5);
+		assertEquals((student.getAverageGrade() == result) && (result == 5), true);
+	}
+
+	
+	@Test
+	public void testHasClearedTheCourse() {
+		student.setAverageGrade(6.0);
+		assertEquals(student.hasClearedTheCourse(), true);
+		
+		student.setAverageGrade(4.0);
+		assertEquals(student.hasClearedTheCourse(), false);
+	}
+	
+	@Test
+	public void testToString() {
+		student.setFirstGrade(5.0);
+		student.setSecondGrade(5);
+		student.setThirdGrade(5);
+		//System.out.println(s.toString());
+		
+		String expected = "The student has not cleared the course";
+			
+		assertEquals(student.toString().contains(expected), true);
+		
+		student.setFirstGrade(7.0);
+		student.setSecondGrade(7);
+		student.setThirdGrade(7);
+		//System.out.println(s.toString());
+		
+		String expected2 = "The student has cleared the course";
+		
+		//String expected2 = "\nThe student has cleared the course\n-----------------------";
+		
+		assertEquals(student.toString().contains(expected2), true);
+}
+
+
+	@Test
 	public void testCalculateAverage() {
 		double sumOfGrades = 0;
 		double averageResult = 0;
@@ -71,14 +137,6 @@ Person s = new Person("Niklas", "sawen", 40,'M');
 		assertEquals(student.getAverageGrade(), averageResult, 0);
 	}
 
-	@Test
-	public void testHasClearedTheCourse() {
-		student.calculateAverage();
-		student2.calculateAverage();
 
-		assertEquals(student.hasClearedTheCourse(), true);
-		assertEquals(student2.hasClearedTheCourse(), false);
-
-	}
 
 }
