@@ -59,7 +59,8 @@ Person s = new Person("Niklas", "sawen", 40,'M');
 	@Test
 	public void testSetandGetAverageGrade() {
 		student.setAverageGrade(5.0);
-		assertEquals(student.getAverageGrade() == 5.0, true);
+		assertEquals(student.getAverageGrade(), 5.0, 0);
+		//assertEquals(student.getAverageGrade() == 5.0, true);
 	}
 
 	@Test
@@ -67,8 +68,8 @@ Person s = new Person("Niklas", "sawen", 40,'M');
 		student.setSecondGrade(5);
 		student.setThirdGrade(5);
 		double result = student.calculateAverage(5);
-
-		assertEquals((student.getAverageGrade() == result) && (result == 5), true);
+		assertEquals(student.getAverageGrade(), result, 0);
+		//assertEquals((student.getAverageGrade() == result) && (result == 5), true);
 	}
 
 	@Test
@@ -77,15 +78,16 @@ Person s = new Person("Niklas", "sawen", 40,'M');
 		student.setSecondGrade(5);
 		student.setThirdGrade(5);
 		student.calculateAverage();
-
-		assertEquals((student.getAverageGrade() == 5), true);
+		assertEquals(student.getAverageGrade(), 5.0, 0);
+		//assertEquals((student.getAverageGrade() == 5), true);
 
 	}
 
 	@Test
 	public void testCalculateAveragewithAllParam() {
 		double result = student.calculateAverage(5, 5, 5);
-		assertEquals((student.getAverageGrade() == result) && (result == 5), true);
+		assertEquals(student.getAverageGrade(), result, 0);
+		//assertEquals((student.getAverageGrade() == result) && (result == 5), true);
 	}
 
 	
